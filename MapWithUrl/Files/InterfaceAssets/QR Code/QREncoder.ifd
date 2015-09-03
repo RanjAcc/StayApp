@@ -1,0 +1,57 @@
+{
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "id": "mydll:v1",
+  "name": "QR Code",
+  "version": "v1.1",
+  "title": "QR Code",
+  "protocol": "dll",
+  "basePath": "QRCodeEncoder",
+  "dependencies": [
+    "QRCodeEncoder.dll",
+    "Gma.QrCodeNet.Encoding.dll"
+  ],
+  "icons": {
+    "x32": "icon_qrcode_32.png"
+  },
+  "schemas": {
+    "QRCodeEncoder": {
+      "id": "QRCodeEncoder",
+      "type": "object",
+      "title": "QR Code Generator",
+      "description": "Tool to encode any string or URL in a QRCode",
+      "properties": {
+        "GeneratedQRCodePath": {
+          "type": "string",
+          "title": "Generated QR Code path",
+          "description": "Path to the last generated QRCode image",
+          "readonly": true
+        },
+        "TextToEncode": {
+          "type": "string",
+          "title": "Text to encode",
+          "description": "Set here the text you want to encode"
+        }
+      }
+    }
+  },
+  "resources": {
+    "QRCodeEncoder": {
+      "id": "QRCodeEncoder",
+      "isExternalAsset": "true",
+      "templateDesignAccelerator": "QREncoder.dax",
+      "title": "QR Code Generator",
+      "description": "Create QR code for any URL"
+    }
+  },
+  "signature": {
+    "hash": "2jmj7l5rSw0yVb/vlWAYkK/YBwk=",
+    "signatureData": {
+      "editionLevel": "FREE",
+      "hostname": "SAPIN2",
+      "data": "dcWIqNhFStK/+wKmEoGen5WVNPutcg9+DPsRTq6/WSfmUK0v4DMIaz3Wh2KMS7dqp7jBMJSLUvd8JseSHRvIpQSbrO1TIVtJBbyKFjglos8OulxvV+v3VIO1xr/hxN8S8yDC9lBg3GZyxSfsjS4H+WANRIlbJ+9fCjTrvmKksu2spCIPgYlL+D7jwRrc5HXNnYfHBcCxQSUuOEeZ+r+VpKDEjCcLw56BCkCyABkxSRAChMXghnOtiLq/QRp8z6nJtVTWIFQhY1ZE34sqe5CGl3+Xl7aNF+mYbqmqLAslidark5SI0LxatsHs9bR29dk40VTnYqd1yZVxVGn/AGzBBld7jbwamQny0UgtKow3eeRVZwfkmmZ8zE40bxvV4QIkMHKaTAhlOxpm5tYI5vowhSj5Fpq0Y56eFgJiyXY3O3idp6VFkIrnCQPpnHfjjeZKG0ynX1TKA4lae53WIv79PUeV9BL5DKPhGaYI2JuxKnpyzO84s/gbARA6zOIujenqX3RBAxt0IYbJseYxxYhxAe4rvmlVsMSZQs55jLKUd+5x9L41RghIWBrm+eZyXe2KFrJyT2lZXd+9en20Ol9KZe1X80rU4ZreK3/9bH7pJh7CW0QD2Sb06bfaA2W0wBEbGue6LRlVpT0QvReW8nMx1mYJqPRmDayl9khpbbqWo2ZMFmk9fhSw5sjmLOL/S84qTbaI9RO2C+ZRXogplLQlKZPq5f2OoqwB3jToZKwUovbRw5orADvVnLKlWg02hTCHsAN3x7estplC7Af04+vjYK6UU7F7VCQKuyj3fVOHVzgOEvevA8REl5m91A6lJZjedmfpA8XsIMqNM1/gDL73zA3yTvm+0wUFxFBWK2AX8gz6yO/g41N7pzU+EnyFjBTALPemupIlahinGtq2e4CPQWQe6ZWp0aYbRogYjVHPuv4O4z5TLNfSggADgips4SgWh+oQ0Dlt3Jfxa+T3pyTHwJkBezUaqcXiUEJsHIH9yn2X7pnYA2SPiRXVPxT177YZt/YcIxlg97gSsZeY4JqB25buhB9ApLIN6G/CpM7l5rP6tkbwOBTPk198/Ft4qfuFWztXiMqkb+9Lld0PnGlqFF6KgORtb/qALvFGuuvO4pa64KfAbmIA8WoFrembBUJHPfprcwl4rw5B2VEjTIcX+/MZ3uacACa/oo1sIHn58EcakMJZg0AtWXrhdWhM9PKepFFSMpCqyfMAGBs9M63i3JpS6IQCYhtWHQUa+TUIOMlEPsrBoh7xowP0X9CUs/dhT350mvJ9jotnGWMo+9eF8tBzW8tWagZldgJ9fkf/wRzIp4IWHapXmn6u7VSoxFCSZl3LpOT+wn+F1f1eq+VW9IEvoftfRoHL+QvF+TV7bmXmExRnh16mvPbba65qEuIoe1+WPVVcC7KcDrX5v/6hMmasY3hwOXuxsdpVmX4t45IJOVlWCQgq5JQSmgKNFPsPGmtx3+uX2C8a8mgOVl5o3FdmqE8KikMF2PT+imap3VyeEmgPh6VQf24IpbPbP8ZTWuApGBOfPi6o9bqQWKvsRHTEzXKy+HCv79V49WASQHUTHN1RiGBkrsTVvdKMyTKK4a1F5Ey/vePGa+f7j175aQ==",
+      "key": "ZqpSPN5tzTb6Ng48CDywQThqWjTMmCA/dMm9lKtUSHajZhyTGLweWUqjxFKAvDB5yTqMbIyde8ioYlo9m0ky4N9csD5pYjdKLuX4nLPGMCmmH2zQcRohutjz6q86rYQLWuTn8m51YShhZ7vzUE+KQitzbY0kApSpW+k0xlvDDK8tof0lQkk5kZbEVDQcP9mW/QCNCIT/oE3dXNZIrt5aJsMJB4fQPqLsbzvkfUhF/MTfm4QvnT1K/5LxwGeEC79qhlucWx7hv24TZQVecVtBQucgN6Jxe0fn4muV79yvC+C9sCt+RyKr+0OVUURDsWDu52//L/fC3riEbT0lzJdecg==",
+      "iv": "NyLAEzAgjNWwcakf6yiSX9DjPJr9qxZBnEI04IcMVVWU9t447C2l5XSs+1wPq5by86IauvbbIdQDicwxXElJOXQunQxTawc+xenUE7nd1J1Auy4WNTOL9Z3ohsrveHqrWyCaSg1Wq0xpgHpTFdu3xmQuOz0NnBOBch5w3mqy+GEvC/kitCBLDQ89LOjw+4ri68qeG4i0qYRL7JYjWtPvWob8IaoZEGg8cXFZFtdFP3eycK5tAcMVsVbs2f8TupxlrQu/o9wu9TI65zGzqU2/x+zBro6y1TLlkeZkMAls8+iBoEB3YEGnW9ZM2ZTcNUrmjND8BrTUVjJTc2D+4uGqeA=="
+    }
+  }
+}

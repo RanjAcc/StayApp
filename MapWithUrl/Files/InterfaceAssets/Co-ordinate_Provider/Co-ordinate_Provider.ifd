@@ -1,0 +1,1642 @@
+{
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "id": "Co-ordinate_Provider",
+  "name": "Co-ordinate_Provider",
+  "version": "1.0",
+  "protocol": "dll",
+  "baseUrl": null,
+  "basePath": "Co_ordinate_Provider",
+  "auth": {},
+  "dependencies": [
+    "Co-ordinate_Provider.dll"
+  ],
+  "schemas": {
+    "POIUrlProvider": {
+      "id": "POIUrlProvider",
+      "type": "object",
+      "properties": {
+        "LstGeoCoordinates": {
+          "title": "LstGeoCoordinates",
+          "type": "array",
+          "description": "LstGeoCoordinates",
+          "items": {
+            "$ref": "GeoCoordinates"
+          }
+        },
+        "ErrorText": {
+          "title": "ErrorText",
+          "type": "string",
+          "description": "ErrorText"
+        }
+      }
+    },
+    "GeoCoordinates": {
+      "id": "GeoCoordinates",
+      "type": "object",
+      "properties": {
+        "Latitude": {
+          "title": "Latitude",
+          "type": "string",
+          "description": "Latitude"
+        },
+        "Longitude": {
+          "title": "Longitude",
+          "type": "string",
+          "description": "Longitude"
+        },
+        "Url": {
+          "title": "Url",
+          "type": "string",
+          "description": "Url"
+        }
+      }
+    },
+    "SearchService.RequestBase": {
+      "id": "SearchService.RequestBase",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Credentials": {
+          "$ref": "SearchService.Credentials"
+        },
+        "Culture": {
+          "title": "Culture",
+          "type": "string",
+          "description": "Culture"
+        },
+        "ExecutionOptions": {
+          "$ref": "SearchService.ExecutionOptions"
+        },
+        "UserProfile": {
+          "$ref": "SearchService.UserProfile"
+        }
+      }
+    },
+    "SearchService.Credentials": {
+      "id": "SearchService.Credentials",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "ApplicationId": {
+          "title": "ApplicationId",
+          "type": "string",
+          "description": "ApplicationId"
+        },
+        "Token": {
+          "title": "Token",
+          "type": "string",
+          "description": "Token"
+        }
+      }
+    },
+    "SearchService.ExecutionOptions": {
+      "id": "SearchService.ExecutionOptions",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "SuppressFaults": {
+          "title": "SuppressFaults",
+          "type": "boolean",
+          "description": "SuppressFaults"
+        }
+      }
+    },
+    "SearchService.UserProfile": {
+      "id": "SearchService.UserProfile",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "CurrentHeading": {
+          "$ref": "SearchService.Heading"
+        },
+        "CurrentLocation": {
+          "$ref": "SearchService.UserLocation"
+        },
+        "DeviceType": {
+          "$ref": "SearchService.DeviceType"
+        },
+        "DistanceUnit": {
+          "$ref": "SearchService.DistanceUnit"
+        },
+        "IPAddress": {
+          "title": "IPAddress",
+          "type": "string",
+          "description": "IPAddress"
+        },
+        "MapView": {
+          "$ref": "SearchService.ShapeBase"
+        },
+        "ScreenSize": {
+          "$ref": "SearchService.SizeOfint"
+        }
+      }
+    },
+    "SearchService.SearchRequest": {
+      "id": "SearchService.SearchRequest",
+      "type": "object",
+      "properties": {
+        "Query": {
+          "title": "Query",
+          "type": "string",
+          "description": "Query"
+        },
+        "SearchOptions": {
+          "$ref": "SearchService.SearchOptions"
+        },
+        "StructuredQuery": {
+          "$ref": "SearchService.StructuredSearchQuery"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Credentials": {
+          "$ref": "SearchService.Credentials"
+        },
+        "Culture": {
+          "title": "Culture",
+          "type": "string",
+          "description": "Culture"
+        },
+        "ExecutionOptions": {
+          "$ref": "SearchService.ExecutionOptions"
+        },
+        "UserProfile": {
+          "$ref": "SearchService.UserProfile"
+        }
+      }
+    },
+    "SearchService.SearchOptions": {
+      "id": "SearchService.SearchOptions",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "AutocorrectQuery": {
+          "id": "object",
+          "title": "AutocorrectQuery",
+          "type": "object",
+          "description": "AutocorrectQuery"
+        },
+        "Count": {
+          "id": "object",
+          "title": "Count",
+          "type": "object",
+          "description": "Count"
+        },
+        "Filters": {
+          "$ref": "SearchService.FilterExpressionBase"
+        },
+        "ListingType": {
+          "$ref": "SearchService.ListingType"
+        },
+        "ParseOnly": {
+          "title": "ParseOnly",
+          "type": "boolean",
+          "description": "ParseOnly"
+        },
+        "Radius": {
+          "id": "object",
+          "title": "Radius",
+          "type": "object",
+          "description": "Radius"
+        },
+        "SortOrder": {
+          "$ref": "SearchService.SortOrder"
+        },
+        "StartingIndex": {
+          "title": "StartingIndex",
+          "type": "integer",
+          "description": "StartingIndex"
+        }
+      }
+    },
+    "SearchService.StructuredSearchQuery": {
+      "id": "SearchService.StructuredSearchQuery",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Keyword": {
+          "title": "Keyword",
+          "type": "string",
+          "description": "Keyword"
+        },
+        "Location": {
+          "title": "Location",
+          "type": "string",
+          "description": "Location"
+        }
+      }
+    },
+    "SearchService.Heading": {
+      "id": "SearchService.Heading",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Orientation": {
+          "title": "Orientation",
+          "type": "number",
+          "description": "Orientation",
+          "format": "double"
+        }
+      }
+    },
+    "SearchService.UserLocation": {
+      "id": "SearchService.UserLocation",
+      "type": "object",
+      "properties": {
+        "Confidence": {
+          "$ref": "SearchService.Confidence"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Altitude": {
+          "title": "Altitude",
+          "type": "number",
+          "description": "Altitude",
+          "format": "double"
+        },
+        "Latitude": {
+          "title": "Latitude",
+          "type": "number",
+          "description": "Latitude",
+          "format": "double"
+        },
+        "Longitude": {
+          "title": "Longitude",
+          "type": "number",
+          "description": "Longitude",
+          "format": "double"
+        }
+      }
+    },
+    "SearchService.ShapeBase": {
+      "id": "SearchService.ShapeBase",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.SizeOfint": {
+      "id": "SearchService.SizeOfint",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Height": {
+          "title": "Height",
+          "type": "integer",
+          "description": "Height"
+        },
+        "Width": {
+          "title": "Width",
+          "type": "integer",
+          "description": "Width"
+        }
+      }
+    },
+    "SearchService.DeviceType": {
+      "id": "SearchService.DeviceType",
+      "type": "string",
+      "enum": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "SearchService.DistanceUnit": {
+      "id": "SearchService.DistanceUnit",
+      "type": "string",
+      "enum": [
+        "Kilometer",
+        "Mile"
+      ]
+    },
+    "SearchService.Location": {
+      "id": "SearchService.Location",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Altitude": {
+          "title": "Altitude",
+          "type": "number",
+          "description": "Altitude",
+          "format": "double"
+        },
+        "Latitude": {
+          "title": "Latitude",
+          "type": "number",
+          "description": "Latitude",
+          "format": "double"
+        },
+        "Longitude": {
+          "title": "Longitude",
+          "type": "number",
+          "description": "Longitude",
+          "format": "double"
+        }
+      }
+    },
+    "SearchService.GeocodeLocation": {
+      "id": "SearchService.GeocodeLocation",
+      "type": "object",
+      "properties": {
+        "CalculationMethod": {
+          "title": "CalculationMethod",
+          "type": "string",
+          "description": "CalculationMethod"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Altitude": {
+          "title": "Altitude",
+          "type": "number",
+          "description": "Altitude",
+          "format": "double"
+        },
+        "Latitude": {
+          "title": "Latitude",
+          "type": "number",
+          "description": "Latitude",
+          "format": "double"
+        },
+        "Longitude": {
+          "title": "Longitude",
+          "type": "number",
+          "description": "Longitude",
+          "format": "double"
+        }
+      }
+    },
+    "SearchService.Confidence": {
+      "id": "SearchService.Confidence",
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "SearchService.Rectangle": {
+      "id": "SearchService.Rectangle",
+      "type": "object",
+      "properties": {
+        "Northeast": {
+          "$ref": "SearchService.Location"
+        },
+        "Southwest": {
+          "$ref": "SearchService.Location"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.Polygon": {
+      "id": "SearchService.Polygon",
+      "type": "object",
+      "properties": {
+        "Vertices": {
+          "title": "Vertices",
+          "type": "object",
+          "description": "Vertices"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.Circle": {
+      "id": "SearchService.Circle",
+      "type": "object",
+      "properties": {
+        "Center": {
+          "$ref": "SearchService.Location"
+        },
+        "DistanceUnit": {
+          "$ref": "SearchService.DistanceUnit"
+        },
+        "Radius": {
+          "title": "Radius",
+          "type": "number",
+          "description": "Radius",
+          "format": "double"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.FilterExpressionBase": {
+      "id": "SearchService.FilterExpressionBase",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.ListingType": {
+      "id": "SearchService.ListingType",
+      "type": "string",
+      "enum": [
+        "Business",
+        "CommunityContent",
+        "Person",
+        "Unknown"
+      ]
+    },
+    "SearchService.SortOrder": {
+      "id": "SearchService.SortOrder",
+      "type": "string",
+      "enum": [
+        "Relevance",
+        "Distance",
+        "Rating",
+        "Popularity"
+      ]
+    },
+    "SearchService.FilterExpression": {
+      "id": "SearchService.FilterExpression",
+      "type": "object",
+      "properties": {
+        "CompareOperator": {
+          "$ref": "SearchService.CompareOperator"
+        },
+        "FilterValue": {
+          "id": "object",
+          "title": "FilterValue",
+          "type": "object",
+          "description": "FilterValue"
+        },
+        "PropertyId": {
+          "title": "PropertyId",
+          "type": "integer",
+          "description": "PropertyId"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.FilterExpressionClause": {
+      "id": "SearchService.FilterExpressionClause",
+      "type": "object",
+      "properties": {
+        "Expressions": {
+          "title": "Expressions",
+          "type": "object",
+          "description": "Expressions"
+        },
+        "LogicalOperator": {
+          "$ref": "SearchService.LogicalOperator"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        }
+      }
+    },
+    "SearchService.Neighborhood": {
+      "id": "SearchService.Neighborhood",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "City": {
+          "title": "City",
+          "type": "string",
+          "description": "City"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "integer",
+          "description": "Id"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.CategorySpecificPropertySet": {
+      "id": "SearchService.CategorySpecificPropertySet",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "CategoryName": {
+          "title": "CategoryName",
+          "type": "string",
+          "description": "CategoryName"
+        },
+        "Properties": {
+          "title": "Properties",
+          "type": "object",
+          "description": "Properties"
+        }
+      }
+    },
+    "SearchService.SearchResponse": {
+      "id": "SearchService.SearchResponse",
+      "type": "object",
+      "properties": {
+        "QuerySuggestion": {
+          "$ref": "SearchService.QuerySuggestion"
+        },
+        "ResultSets": {
+          "title": "ResultSets",
+          "type": "object",
+          "description": "ResultSets"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "BrandLogoUri": {
+          "title": "BrandLogoUri",
+          "type": "string",
+          "description": "BrandLogoUri",
+          "format": "uri"
+        },
+        "ResponseSummary": {
+          "$ref": "SearchService.ResponseSummary"
+        }
+      }
+    },
+    "SearchService.QuerySuggestion": {
+      "id": "SearchService.QuerySuggestion",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Query": {
+          "title": "Query",
+          "type": "string",
+          "description": "Query"
+        },
+        "StructuredQuery": {
+          "$ref": "SearchService.StructuredSearchQuery"
+        }
+      }
+    },
+    "SearchService.SearchResultSet": {
+      "id": "SearchService.SearchResultSet",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "AlternateSearchRegions": {
+          "title": "AlternateSearchRegions",
+          "type": "object",
+          "description": "AlternateSearchRegions"
+        },
+        "AvailableFilters": {
+          "title": "AvailableFilters",
+          "type": "object",
+          "description": "AvailableFilters"
+        },
+        "CategoryCounts": {
+          "title": "CategoryCounts",
+          "type": "object",
+          "description": "CategoryCounts"
+        },
+        "EstimatedMatches": {
+          "title": "EstimatedMatches",
+          "type": "integer",
+          "description": "EstimatedMatches"
+        },
+        "ListingType": {
+          "title": "ListingType",
+          "type": "string",
+          "description": "ListingType"
+        },
+        "Parse": {
+          "$ref": "SearchService.Parse"
+        },
+        "QueryCategory": {
+          "$ref": "SearchService.Category"
+        },
+        "QueryCorrected": {
+          "title": "QueryCorrected",
+          "type": "boolean",
+          "description": "QueryCorrected"
+        },
+        "Results": {
+          "title": "Results",
+          "type": "object",
+          "description": "Results"
+        },
+        "SearchRegion": {
+          "$ref": "SearchService.SearchRegion"
+        }
+      }
+    },
+    "SearchService.SearchRegion": {
+      "id": "SearchService.SearchRegion",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "BoundingArea": {
+          "$ref": "SearchService.ShapeBase"
+        },
+        "GeocodeLocation": {
+          "$ref": "SearchService.GeocodeResult"
+        },
+        "Source": {
+          "title": "Source",
+          "type": "string",
+          "description": "Source"
+        }
+      }
+    },
+    "SearchService.AvailableFilter": {
+      "id": "SearchService.AvailableFilter",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "PropertyId": {
+          "title": "PropertyId",
+          "type": "integer",
+          "description": "PropertyId"
+        },
+        "PropertyName": {
+          "title": "PropertyName",
+          "type": "string",
+          "description": "PropertyName"
+        }
+      }
+    },
+    "SearchService.ValueListFilter": {
+      "id": "SearchService.ValueListFilter",
+      "type": "object",
+      "properties": {
+        "Values": {
+          "title": "Values",
+          "type": "object",
+          "description": "Values"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "PropertyId": {
+          "title": "PropertyId",
+          "type": "integer",
+          "description": "PropertyId"
+        },
+        "PropertyName": {
+          "title": "PropertyName",
+          "type": "string",
+          "description": "PropertyName"
+        }
+      }
+    },
+    "SearchService.FilterValue": {
+      "id": "SearchService.FilterValue",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "integer",
+          "description": "Id"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.Category": {
+      "id": "SearchService.Category",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "integer",
+          "description": "Id"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.RangeFilter": {
+      "id": "SearchService.RangeFilter",
+      "type": "object",
+      "properties": {
+        "MaximumValue": {
+          "id": "object",
+          "title": "MaximumValue",
+          "type": "object",
+          "description": "MaximumValue"
+        },
+        "MinimumValue": {
+          "id": "object",
+          "title": "MinimumValue",
+          "type": "object",
+          "description": "MinimumValue"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "PropertyId": {
+          "title": "PropertyId",
+          "type": "integer",
+          "description": "PropertyId"
+        },
+        "PropertyName": {
+          "title": "PropertyName",
+          "type": "string",
+          "description": "PropertyName"
+        }
+      }
+    },
+    "SearchService.CategoryCount": {
+      "id": "SearchService.CategoryCount",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Category": {
+          "$ref": "SearchService.Category"
+        },
+        "Count": {
+          "title": "Count",
+          "type": "integer",
+          "description": "Count"
+        },
+        "CountByNeighborhood": {
+          "title": "CountByNeighborhood",
+          "type": "object",
+          "description": "CountByNeighborhood"
+        }
+      }
+    },
+    "SearchService.Parse": {
+      "id": "SearchService.Parse",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Address": {
+          "$ref": "SearchService.Address"
+        },
+        "Keyword": {
+          "title": "Keyword",
+          "type": "string",
+          "description": "Keyword"
+        },
+        "Landmark": {
+          "title": "Landmark",
+          "type": "string",
+          "description": "Landmark"
+        },
+        "LocationSeparator": {
+          "title": "LocationSeparator",
+          "type": "string",
+          "description": "LocationSeparator"
+        }
+      }
+    },
+    "SearchService.SearchResultBase": {
+      "id": "SearchService.SearchResultBase",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Distance": {
+          "title": "Distance",
+          "type": "number",
+          "description": "Distance",
+          "format": "double"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "string",
+          "description": "Id"
+        },
+        "LocationData": {
+          "$ref": "SearchService.LocationData"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.LocationData": {
+      "id": "SearchService.LocationData",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Confidence": {
+          "$ref": "SearchService.Confidence"
+        },
+        "Locations": {
+          "title": "Locations",
+          "type": "object",
+          "description": "Locations"
+        },
+        "MatchCodes": {
+          "title": "MatchCodes",
+          "type": "object",
+          "description": "MatchCodes"
+        }
+      }
+    },
+    "SearchService.CommunityContentSearchResult": {
+      "id": "SearchService.CommunityContentSearchResult",
+      "type": "object",
+      "properties": {
+        "AdditionalProperties": {
+          "title": "AdditionalProperties",
+          "type": "object",
+          "description": "AdditionalProperties"
+        },
+        "Description": {
+          "title": "Description",
+          "type": "string",
+          "description": "Description"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Distance": {
+          "title": "Distance",
+          "type": "number",
+          "description": "Distance",
+          "format": "double"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "string",
+          "description": "Id"
+        },
+        "LocationData": {
+          "$ref": "SearchService.LocationData"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.BusinessSearchResult": {
+      "id": "SearchService.BusinessSearchResult",
+      "type": "object",
+      "properties": {
+        "AdditionalProperties": {
+          "title": "AdditionalProperties",
+          "type": "object",
+          "description": "AdditionalProperties"
+        },
+        "Address": {
+          "$ref": "SearchService.Address"
+        },
+        "Categories": {
+          "title": "Categories",
+          "type": "object",
+          "description": "Categories"
+        },
+        "CategorySpecificProperties": {
+          "title": "CategorySpecificProperties",
+          "type": "object",
+          "description": "CategorySpecificProperties"
+        },
+        "Neighborhoods": {
+          "title": "Neighborhoods",
+          "type": "object",
+          "description": "Neighborhoods"
+        },
+        "PhoneNumber": {
+          "title": "PhoneNumber",
+          "type": "string",
+          "description": "PhoneNumber"
+        },
+        "RatingCount": {
+          "title": "RatingCount",
+          "type": "integer",
+          "description": "RatingCount"
+        },
+        "ReviewCount": {
+          "title": "ReviewCount",
+          "type": "integer",
+          "description": "ReviewCount"
+        },
+        "UserRating": {
+          "title": "UserRating",
+          "type": "number",
+          "description": "UserRating",
+          "format": "double"
+        },
+        "Website": {
+          "title": "Website",
+          "type": "string",
+          "description": "Website",
+          "format": "uri"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Distance": {
+          "title": "Distance",
+          "type": "number",
+          "description": "Distance",
+          "format": "double"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "string",
+          "description": "Id"
+        },
+        "LocationData": {
+          "$ref": "SearchService.LocationData"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.PersonSearchResult": {
+      "id": "SearchService.PersonSearchResult",
+      "type": "object",
+      "properties": {
+        "Address": {
+          "$ref": "SearchService.Address"
+        },
+        "PhoneNumber": {
+          "title": "PhoneNumber",
+          "type": "string",
+          "description": "PhoneNumber"
+        },
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Distance": {
+          "title": "Distance",
+          "type": "number",
+          "description": "Distance",
+          "format": "double"
+        },
+        "Id": {
+          "title": "Id",
+          "type": "string",
+          "description": "Id"
+        },
+        "LocationData": {
+          "$ref": "SearchService.LocationData"
+        },
+        "Name": {
+          "title": "Name",
+          "type": "string",
+          "description": "Name"
+        }
+      }
+    },
+    "SearchService.LogicalOperator": {
+      "id": "SearchService.LogicalOperator",
+      "type": "string",
+      "enum": [
+        "And",
+        "Or"
+      ]
+    },
+    "SearchService.CompareOperator": {
+      "id": "SearchService.CompareOperator",
+      "type": "string",
+      "enum": [
+        "Equals",
+        "GreaterThan",
+        "GreaterThanOrEquals",
+        "LessThan",
+        "LessThanOrEquals"
+      ]
+    },
+    "SearchService.ResponseBase": {
+      "id": "SearchService.ResponseBase",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "BrandLogoUri": {
+          "title": "BrandLogoUri",
+          "type": "string",
+          "description": "BrandLogoUri",
+          "format": "uri"
+        },
+        "ResponseSummary": {
+          "$ref": "SearchService.ResponseSummary"
+        }
+      }
+    },
+    "SearchService.ResponseSummary": {
+      "id": "SearchService.ResponseSummary",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "AuthenticationResultCode": {
+          "$ref": "SearchService.AuthenticationResultCode"
+        },
+        "Copyright": {
+          "title": "Copyright",
+          "type": "string",
+          "description": "Copyright"
+        },
+        "FaultReason": {
+          "title": "FaultReason",
+          "type": "string",
+          "description": "FaultReason"
+        },
+        "StatusCode": {
+          "$ref": "SearchService.ResponseStatusCode"
+        },
+        "TraceId": {
+          "title": "TraceId",
+          "type": "string",
+          "description": "TraceId"
+        }
+      }
+    },
+    "SearchService.AuthenticationResultCode": {
+      "id": "SearchService.AuthenticationResultCode",
+      "type": "string",
+      "enum": [
+        "None",
+        "NoCredentials",
+        "ValidCredentials",
+        "InvalidCredentials",
+        "CredentialsExpired",
+        "NotAuthorized"
+      ]
+    },
+    "SearchService.ResponseStatusCode": {
+      "id": "SearchService.ResponseStatusCode",
+      "type": "string",
+      "enum": [
+        "Success",
+        "BadRequest",
+        "ServerError"
+      ]
+    },
+    "SearchService.GeocodeResult": {
+      "id": "SearchService.GeocodeResult",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "Address": {
+          "$ref": "SearchService.Address"
+        },
+        "BestView": {
+          "$ref": "SearchService.Rectangle"
+        },
+        "Confidence": {
+          "$ref": "SearchService.Confidence"
+        },
+        "DisplayName": {
+          "title": "DisplayName",
+          "type": "string",
+          "description": "DisplayName"
+        },
+        "EntityType": {
+          "title": "EntityType",
+          "type": "string",
+          "description": "EntityType"
+        },
+        "Locations": {
+          "title": "Locations",
+          "type": "object",
+          "description": "Locations"
+        },
+        "MatchCodes": {
+          "title": "MatchCodes",
+          "type": "object",
+          "description": "MatchCodes"
+        }
+      }
+    },
+    "SearchService.Address": {
+      "id": "SearchService.Address",
+      "type": "object",
+      "properties": {
+        "ExtensionData": {
+          "id": "System.Runtime.Serialization.ExtensionDataObject",
+          "title": "ExtensionData",
+          "type": "object",
+          "description": "ExtensionData"
+        },
+        "AddressLine": {
+          "title": "AddressLine",
+          "type": "string",
+          "description": "AddressLine"
+        },
+        "AdminDistrict": {
+          "title": "AdminDistrict",
+          "type": "string",
+          "description": "AdminDistrict"
+        },
+        "CountryRegion": {
+          "title": "CountryRegion",
+          "type": "string",
+          "description": "CountryRegion"
+        },
+        "District": {
+          "title": "District",
+          "type": "string",
+          "description": "District"
+        },
+        "FormattedAddress": {
+          "title": "FormattedAddress",
+          "type": "string",
+          "description": "FormattedAddress"
+        },
+        "Locality": {
+          "title": "Locality",
+          "type": "string",
+          "description": "Locality"
+        },
+        "PostalCode": {
+          "title": "PostalCode",
+          "type": "string",
+          "description": "PostalCode"
+        },
+        "PostalTown": {
+          "title": "PostalTown",
+          "type": "string",
+          "description": "PostalTown"
+        }
+      }
+    },
+    "SearchService.ISearchService": {
+      "id": "SearchService.ISearchService",
+      "type": "object"
+    },
+    "SearchService.ISearchServiceChannel": {
+      "id": "SearchService.ISearchServiceChannel",
+      "type": "object"
+    },
+    "SearchService.SearchServiceClient": {
+      "id": "SearchService.SearchServiceClient",
+      "type": "object",
+      "properties": {
+        "ChannelFactory": {
+          "id": "System.ServiceModel.ChannelFactory`1[Co_ordinate_Provider.SearchService.ISearchService]",
+          "title": "ChannelFactory",
+          "type": "object",
+          "description": "ChannelFactory"
+        },
+        "ClientCredentials": {
+          "id": "System.ServiceModel.Description.ClientCredentials",
+          "title": "ClientCredentials",
+          "type": "object",
+          "description": "ClientCredentials"
+        },
+        "State": {
+          "id": "System.ServiceModel.CommunicationState",
+          "title": "State",
+          "type": "string",
+          "description": "State",
+          "enum": [
+            "Created",
+            "Opening",
+            "Opened",
+            "Closing",
+            "Closed",
+            "Faulted"
+          ]
+        },
+        "InnerChannel": {
+          "id": "System.ServiceModel.IClientChannel",
+          "title": "InnerChannel",
+          "type": "object",
+          "description": "InnerChannel"
+        },
+        "Endpoint": {
+          "id": "System.ServiceModel.Description.ServiceEndpoint",
+          "title": "Endpoint",
+          "type": "object",
+          "description": "Endpoint"
+        }
+      }
+    }
+  },
+  "resources": {
+    "POIUrlProvider": {
+      "title": "POIUrlProvider",
+      "isInterfaceAsset": true,
+      "methods": {
+        "PopulateData": {
+          "title": "PopulateData",
+          "description": "PopulateData",
+          "response": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    "GeoCoordinates": {
+      "title": "GeoCoordinates",
+      "isInterfaceAsset": true
+    },
+    "SearchService.RequestBase": {
+      "title": "RequestBase",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Credentials": {
+      "title": "Credentials",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ExecutionOptions": {
+      "title": "ExecutionOptions",
+      "isInterfaceAsset": true
+    },
+    "SearchService.UserProfile": {
+      "title": "UserProfile",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchRequest": {
+      "title": "SearchRequest",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchOptions": {
+      "title": "SearchOptions",
+      "isInterfaceAsset": true
+    },
+    "SearchService.StructuredSearchQuery": {
+      "title": "StructuredSearchQuery",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Heading": {
+      "title": "Heading",
+      "isInterfaceAsset": true
+    },
+    "SearchService.UserLocation": {
+      "title": "UserLocation",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ShapeBase": {
+      "title": "ShapeBase",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SizeOfint": {
+      "title": "SizeOfint",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Location": {
+      "title": "Location",
+      "isInterfaceAsset": true
+    },
+    "SearchService.GeocodeLocation": {
+      "title": "GeocodeLocation",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Rectangle": {
+      "title": "Rectangle",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Polygon": {
+      "title": "Polygon",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Circle": {
+      "title": "Circle",
+      "isInterfaceAsset": true
+    },
+    "SearchService.FilterExpressionBase": {
+      "title": "FilterExpressionBase",
+      "isInterfaceAsset": true
+    },
+    "SearchService.FilterExpression": {
+      "title": "FilterExpression",
+      "isInterfaceAsset": true
+    },
+    "SearchService.FilterExpressionClause": {
+      "title": "FilterExpressionClause",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Neighborhood": {
+      "title": "Neighborhood",
+      "isInterfaceAsset": true
+    },
+    "SearchService.CategorySpecificPropertySet": {
+      "title": "CategorySpecificPropertySet",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchResponse": {
+      "title": "SearchResponse",
+      "isInterfaceAsset": true
+    },
+    "SearchService.QuerySuggestion": {
+      "title": "QuerySuggestion",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchResultSet": {
+      "title": "SearchResultSet",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchRegion": {
+      "title": "SearchRegion",
+      "isInterfaceAsset": true
+    },
+    "SearchService.AvailableFilter": {
+      "title": "AvailableFilter",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ValueListFilter": {
+      "title": "ValueListFilter",
+      "isInterfaceAsset": true
+    },
+    "SearchService.FilterValue": {
+      "title": "FilterValue",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Category": {
+      "title": "Category",
+      "isInterfaceAsset": true
+    },
+    "SearchService.RangeFilter": {
+      "title": "RangeFilter",
+      "isInterfaceAsset": true
+    },
+    "SearchService.CategoryCount": {
+      "title": "CategoryCount",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Parse": {
+      "title": "Parse",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchResultBase": {
+      "title": "SearchResultBase",
+      "isInterfaceAsset": true
+    },
+    "SearchService.LocationData": {
+      "title": "LocationData",
+      "isInterfaceAsset": true
+    },
+    "SearchService.CommunityContentSearchResult": {
+      "title": "CommunityContentSearchResult",
+      "isInterfaceAsset": true
+    },
+    "SearchService.BusinessSearchResult": {
+      "title": "BusinessSearchResult",
+      "isInterfaceAsset": true
+    },
+    "SearchService.PersonSearchResult": {
+      "title": "PersonSearchResult",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ResponseBase": {
+      "title": "ResponseBase",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ResponseSummary": {
+      "title": "ResponseSummary",
+      "isInterfaceAsset": true
+    },
+    "SearchService.GeocodeResult": {
+      "title": "GeocodeResult",
+      "isInterfaceAsset": true
+    },
+    "SearchService.Address": {
+      "title": "Address",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ISearchService": {
+      "title": "ISearchService",
+      "isInterfaceAsset": true
+    },
+    "SearchService.ISearchServiceChannel": {
+      "title": "ISearchServiceChannel",
+      "isInterfaceAsset": true
+    },
+    "SearchService.SearchServiceClient": {
+      "title": "SearchServiceClient",
+      "isInterfaceAsset": true,
+      "methods": {
+        "Search": {
+          "title": "Search",
+          "description": "Search",
+          "response": {
+            "$ref": "SearchService.SearchResponse"
+          },
+          "parameters": {
+            "request": {
+              "type": "SearchService.SearchRequest",
+              "required": true
+            }
+          }
+        },
+        "SearchAsync": {
+          "title": "SearchAsync",
+          "description": "SearchAsync",
+          "response": {
+            "$ref": "System.Threading.Tasks.Task`1[Co_ordinate_Provider.SearchService.SearchResponse]"
+          },
+          "parameters": {
+            "request": {
+              "type": "SearchService.SearchRequest",
+              "required": true
+            }
+          }
+        },
+        "Open": {
+          "title": "Open",
+          "description": "Open",
+          "response": {
+            "type": "null"
+          }
+        },
+        "Abort": {
+          "title": "Abort",
+          "description": "Abort",
+          "response": {
+            "type": "null"
+          }
+        },
+        "Close": {
+          "title": "Close",
+          "description": "Close",
+          "response": {
+            "type": "null"
+          }
+        },
+        "DisplayInitializationUI": {
+          "title": "DisplayInitializationUI",
+          "description": "DisplayInitializationUI",
+          "response": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  }
+}
